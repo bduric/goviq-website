@@ -4,7 +4,9 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
-  }
+  },
+  basePath: '/goviq-website',
+  assetPrefix: '/goviq-website/'
 }
 
 module.exports = nextConfig
