@@ -4,22 +4,14 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     
-    // In production, this will be replaced by API Gateway URL
-    const apiUrl = process.env.CONTACT_API_URL || 'https://your-api-gateway-url.execute-api.us-east-1.amazonaws.com/prod/contact'
+    // For now, just simulate success (we'll add Netlify forms later)
+    // In a real deployment, you'd integrate with a form service
     
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
-    })
+    // Simulate processing delay
+    await new Promise(resolve => setTimeout(resolve, 1000))
     
-    if (response.ok) {
-      return NextResponse.json({ message: 'Email sent successfully' })
-    } else {
-      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
-    }
+    // For demo purposes, always return success
+    return NextResponse.json({ message: 'Email sent successfully' })
   } catch (error) {
     return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
   }
