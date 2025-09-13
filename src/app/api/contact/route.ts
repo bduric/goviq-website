@@ -4,16 +4,23 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     
-    // For now, just simulate success (we'll add Netlify forms later)
-    // In a real deployment, you'd integrate with a form service
+    // For now, just log the form data and return success
+    // Replace this with actual email sending logic
+    console.log('Contact form submission:', body)
     
-    // Simulate processing delay
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    // You can integrate with your preferred email service here:
+    // - AWS SES
+    // - SendGrid
+    // - Nodemailer
+    // - etc.
     
-    // For demo purposes, always return success
     return NextResponse.json({ message: 'Email sent successfully' })
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
+    console.error('Contact form error:', error)
+    return NextResponse.json(
+      { error: 'Failed to send email' },
+      { status: 500 }
+    )
   }
 }
 
