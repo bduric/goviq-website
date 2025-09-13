@@ -21,7 +21,7 @@ export default function Contact() {
     setSubmitStatus('idle')
     
     try {
-      const response = await fetch('https://azqe6o5oujauvo7nwwz7z72z6i0wgycc.lambda-url.us-east-1.on.aws/', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
