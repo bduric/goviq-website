@@ -5,8 +5,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/logo.png" alt="GovIQ" className="h-12 w-auto" />
-              <h3 className="text-2xl font-bold">GovIQ</h3>
+              <img src="https://bduric.github.io/goviq-website/logo-white.png" alt="GovIQ" className="h-12 w-auto" />
+              <h3 className="text-2xl font-bold">GovIQ Solutions</h3>
             </div>
             <p className="text-blue-200 mb-6 max-w-md">
               Innovative AI solutions designed specifically for government agencies. 
@@ -49,7 +49,7 @@ export default function Footer() {
         
         <div className="border-t border-blue-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-blue-200 text-sm">
-            © 2024 GovIQ. All rights reserved.
+            © 2025 GovIQ Solutions LLC All rights reserved.
           </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <span className="text-xs text-blue-200">🏢 On-Premises</span>
