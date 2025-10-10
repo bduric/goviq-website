@@ -12,7 +12,7 @@ export default function Header() {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center space-x-3">
               <img
-                src="https://bduric.github.io/goviq-website/logo.png"
+                src="/logo.png"
                 alt="GovIQ"
                 className="h-10 w-auto"
               />

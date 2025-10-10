@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img src="https://bduric.github.io/goviq-website/logo-white.PNG" alt="GovIQ" className="h-12 w-auto" />
+              <img src="/logo-white.PNG" alt="GovIQ" className="h-12 w-auto" />
               <h3 className="text-2xl font-bold">GovIQ Solutions</h3>
             </div>
             <p className="text-blue-200 mb-6 max-w-md">
