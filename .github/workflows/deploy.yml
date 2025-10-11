@@ -33,12 +33,15 @@ jobs:
         run: npm ci
 
       - name: Build website
-        run: npm run build
+        run: |
+          # Temporarily change output directory for GitHub Pages
+          sed -i "s/distDir: 'build'/distDir: 'out'/g" next.config.js
+          npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./out
 
   deploy:
     environment:
