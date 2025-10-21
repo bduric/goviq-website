@@ -29,8 +29,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Solutions</h4>
             <ul className="space-y-2 text-blue-200">
-              <li><a href="#" className="hover:text-white transition-colors">audIQ Audio Analysis</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Document Intelligence</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">A3 - AI Audio Analysis</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">IDP1 - Intelligent Document Processing</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Predictive Analytics</a></li>
               <li><a href="#" className="hover:text-white transition-colors">On-Premises Deployment</a></li>
             </ul>

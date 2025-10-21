@@ -1,12 +1,12 @@
 export default function Solutions() {
   const solutions = [
     {
-      title: "audIQ - Audio Analysis",
+      title: "A3 - AI Audio Analysis",
       description: "Enterprise-grade platform for analyzing audio calls (911, 311, Radio) with AI-powered transcription and quality assurance.",
       features: ["Call Transcription", "Quality Scoring", "Modern Web Interface"]
     },
     {
-      title: "Document Intelligence",
+      title: "IDP1 - Intelligent Document Processing",
       description: "Automated processing and analysis of government documents with advanced OCR and NLP capabilities.",
       features: ["Form Processing", "Data Extraction", "Compliance Checking"]
     },

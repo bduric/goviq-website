@@ -232,6 +232,23 @@ export default function Contact() {
                 </li>
               </ul>
             </div>
+            
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h4 className="font-semibold text-gray-900 mb-3">Company Information</h4>
+              <div className="space-y-3 text-sm text-gov-gray">
+                <div>
+                  <span className="font-medium text-gray-900">GOVIQ SOLUTIONS LLC</span>
+                  <span className="text-xs text-gray-500 ml-2">(GOVCON DATA)</span>
+                </div>
+                <div className="grid grid-cols-1 gap-2">
+                  <div><span className="font-medium">UEI:</span> D4M9HGGBVHJ5</div>
+                  <div><span className="font-medium">CAGE Code:</span> 16BS2</div>
+                  <div><span className="font-medium">Primary NAICS:</span> 541511 (Custom Computer Programming Services)</div>
+                  <div><span className="font-medium">Status:</span> Small Business, Women-Owned Small Business (WOSB - pending SBA Certification)</div>
+                  <div><span className="font-medium">SAM Registration Expiration:</span> 2026-10-17</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
