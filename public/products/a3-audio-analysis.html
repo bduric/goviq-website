@@ -3,85 +3,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A3 - AI Audio Analysis | GovIQ Solutions</title>
+    <title>Smart Augmentation and Automation for Public Safety Compliance</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f8fafc;
+        @page {
+            margin: 0.5in;
+            size: letter;
         }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.2;
+            color: #333;
+            margin: 0;
+            padding: 10px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .avoid-break {
+            page-break-inside: avoid;
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 8.5in;
             margin: 0 auto;
             background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-        h1 {
-            color: #1e3a8a;
-            border-bottom: 3px solid #10b981;
-            padding-bottom: 10px;
-        }
-        .close-btn {
-            float: right;
-            background: #ef4444;
+
+        .header {
+            background: linear-gradient(135deg, #003366 0%, #004080 100%);
             color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
         }
-        .close-btn:hover {
-            background: #dc2626;
+
+        .header h1 {
+            margin: 0 0 8px 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section h2 {
+            color: #003366;
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e1e5f2;
+            padding-bottom: 6px;
+        }
+
+        .section h3 {
+            color: #003366;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .primary-color { color: #003366; }
+        .bg-primary { background-color: #003366; }
+        .accent-color { color: #FFA500; }
+        .bg-accent { background-color: #FFA500; }
+        
+        .stat-box { 
+            border-left: 6px solid #FFA500;
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        
+        .promo-shadow { 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .simple-image-wrapper {
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .simple-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .workflow-card {
+            background: white;
+            padding: 14px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #003366;
+            min-height: 130px;
+        }
+
+        .workflow-card.accent {
+            border-top-color: #003366;
+        }
+
+        .workflow-card h4 {
+            color: #003366;
+            font-size: 15px;
+            margin: 0 0 8px 0;
+            font-weight: 600;
+        }
+
+        .workflow-card p {
+            font-size: 13px;
+            color: #4a5568;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: "►";
+            color: #003366;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #003366 0%, #004080 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        .cta-section h3 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+        }
+
+        .cta-section p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            background: #003366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <button class="close-btn" onclick="window.close()">Close</button>
-        
-        <div style="display: flex; align-items: center; margin-bottom: 30px;">
-            <img src="/logo-white.PNG" alt="GovIQ Solutions" style="height: 60px; margin-right: 15px; background: #1e3a8a; padding: 10px; border-radius: 8px;">
-            <div>
-                <h1 style="margin: 0; border: none; padding: 0;">A3 - AI Audio Analysis</h1>
-                <p style="margin: 5px 0 0 0; color: #6b7280; font-size: 14px;">GovIQ Solutions</p>
+        <div class="header">
+            <img src="./logo-white.PNG" alt="GovIQs Logo" style="position: absolute; top: 20px; right: 30px; width: 80px; height: 60px; object-fit: contain;">
+            <div class="logo-section" style="justify-content: center; color: white;">
+                <div class="logo-circle">A3</div>
+                <h1>Compliance as a Service</h1>
+            </div>
+            <p class="subtitle">Smart Augmentation and Automation for Public Safety</p>
+        </div>
+
+        <div class="content">
+            <!-- Executive Summary -->
+            <div class="section avoid-break">
+                <h2>Executive Summary</h2>
+                <p><strong>Eliminate 90% of manual call auditing time</strong> while improving compliance accuracy and freeing your workforce for high-value tasks. Our AI-powered platform transforms how Public Safety agencies handle call auditing—reducing processing from <span class="highlight">30 minutes to 3-5 minutes per call</span>.</p>
+                
+                <p style="color: #003366; font-weight: 600;">For a high-volume PSAP like Virginia Beach, auditing only 2% of calls (approx. 6,000 calls/year) manually consumes the labor of <strong>two full-time employees (FTEs) saved annually.</strong></p>
+            </div>
+
+            <!-- The Problem/Solution -->
+            <div class="two-column avoid-break">
+                <div>
+                    <h3 style="color: #e53e3e;">The Operational Challenge</h3>
+                    <ul>
+                        <li><strong>Time-Intensive Processing:</strong> 30+ minutes per call audit consuming supervisor expertise</li>
+                        <li><strong>Limited Coverage:</strong> Most agencies can only audit ~2% of calls (bare minimum)</li>
+                        <li><strong>Inconsistent Outcomes:</strong> Manual auditing leads to subjective scoring</li>
+                        <li><strong>Resource Drain:</strong> Skilled staff tied up in administrative overhead</li>
+                        <li><strong>Compliance Risk:</strong> Paper-based documentation and hard-to-retrieve records</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <div class="stat-box">
+                        <p style="font-size: 12px; color: #666; margin: 0;">Manual Time Commitment</p>
+                        <p style="font-size: 32px; font-weight: 700; color: #003366; margin: 5px 0;">30 min</p>
+                        <p style="font-size: 11px; color: #666; margin: 0;">Average per call audit</p>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <p style="font-size: 12px; color: #666; margin: 0;">Compliance Standard</p>
+                        <p style="font-size: 32px; font-weight: 700; color: #003366; margin: 5px 0;">~2%</p>
+                        <p style="font-size: 11px; color: #666; margin: 0;">Bare minimum coverage</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Approach -->
+            <div class="section avoid-break">
+                <h2>Our Approach: AI-Powered Compliance Workflow</h2>
+                
+                <div class="workflow-grid">
+                    <div class="workflow-card">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🧠</div>
+                        <h4>1. AI Analysis</h4>
+                        <p>Full diarized, searchable transcriptions; quick summary generation; <strong>3–5 minute</strong> processing time; generates provisional score and flags against custom rubrics.</p>
+                    </div>
+                    
+                    <div class="workflow-card accent">
+                        <div style="font-size: 24px; margin-bottom: 8px; color: #003366;">🧑‍💻</div>
+                        <h4>2. Human Review</h4>
+                        <p>Supervisor <strong>is always the human in the loop</strong>, using AI to make quick, accurate decisions. Full overwrite authority on provisional scores.</p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🔒</div>
+                        <h4>3. Secure Archive</h4>
+                        <p>Highly encrypted, searchable storage of all data and review notes; creates immutable audit trail, replacing paper documentation.</p>
+                    </div>
+
+                    <div class="workflow-card accent">
+                        <div style="font-size: 24px; margin-bottom: 8px; color: #003366;">📊</div>
+                        <h4>4. Compliance Reporting</h4>
+                        <p>One-click generation and export of comprehensive reports for any date range or regulatory requirement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Break Here -->
+            <div class="page-break"></div>
+
+            <!-- Key Benefits -->
+            <div class="section avoid-break" style="margin-top: 20px;">
+                <h2>Key Impact & Benefits</h2>
+                
+                <div class="two-column">
+                    <div>
+                        <h3>The Agent-Centric Advantage</h3>
+                        <p>Converting wasted administrative time into <strong>proactive, on-demand agent development</strong>:</p>
+                        
+                        <ul class="benefits-list">
+                            <li><strong>Custom QA/Training Criteria:</strong> Configurable criteria to meet specific locality requirements</li>
+                            <li><strong>Contextual AI Assistance:</strong> Access contextual AI assistance on each call for nuanced QA</li>
+                            <li><strong>Continuous Improvement Guide:</strong> AI provides analysis with feedback on strengths and improvement areas</li>
+                            <li><strong>On-Demand Access:</strong> Agents access performance data and training guides at their convenience</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <div class="stat-box">
+                            <p style="font-size: 12px; color: #666; margin: 0;">Time Reduction</p>
+                            <p style="font-size: 32px; font-weight: 700; color: #003366; margin: 5px 0;">90%+</p>
+                            <p style="font-size: 11px; color: #666; margin: 0;">From 30 min to 3-5 min</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <p style="font-size: 12px; color: #003366; margin: 0;">Resource Reallocation</p>
+                            <p style="font-size: 32px; font-weight: 700; color: #003366; margin: 5px 0;">2 FTEs</p>
+                            <p style="font-size: 11px; color: #666; margin: 0;">Labor saved annually</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool Features -->
+            <div class="section avoid-break">
+                <h2>Smart Automation Features</h2>
+                
+                <div class="workflow-grid">
+                    <div class="workflow-card">
+                        <h4>🎯 AI-Powered Analysis</h4>
+                        <p>Automated transcription, scoring, and flagging against custom compliance rubrics</p>
+                    </div>
+                    <div class="workflow-card accent">
+                        <h4>📋 Prioritized Review Queue</h4>
+                        <p>High-confidence calls can be auto-approved, others flagged for supervisor review</p>
+                    </div>
+                    <div class="workflow-card">
+                        <h4>🔄 Continuous Learning</h4>
+                        <p>AI models improve accuracy over time with supervisor corrections and feedback</p>
+                    </div>
+                    <div class="workflow-card accent">
+                        <h4>🔗 Seamless Integration</h4>
+                        <p>Direct connection to existing call recording and management systems</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Takeaways -->
+            <div class="section avoid-break">
+                <h2>Key Takeaways for Public Safety Agencies</h2>
+                <ul>
+                    <li><strong>Compliance Certainty:</strong> Achieve 100% call coverage with consistent, objective scoring</li>
+                    <li><strong>Staff Optimization:</strong> Redeploy supervisors to training, coaching, and operational support</li>
+                    <li><strong>Cost Efficiency:</strong> Eliminate overtime costs and reduce administrative overhead</li>
+                    <li><strong>Quality Improvement:</strong> AI-driven insights enable targeted agent development</li>
+                    <li><strong>Audit Ready:</strong> Immutable digital records replace paper-based documentation</li>
+                    <li><strong>Quick ROI:</strong> Typical payback period of 6-12 months for high-volume agencies</li>
+                </ul>
             </div>
         </div>
-        
-        <h2>Enterprise-Grade Audio Intelligence Platform</h2>
-        <p>Transform your government agency's audio communications with our advanced AI-powered analysis platform designed specifically for 911, 311, and radio communications.</p>
-        
-        <h3>Key Features</h3>
-        <ul>
-            <li><strong>Real-time Call Transcription</strong> - Accurate speech-to-text conversion</li>
-            <li><strong>Quality Scoring</strong> - Automated performance evaluation</li>
-            <li><strong>Modern Web Interface</strong> - User-friendly dashboard</li>
-            <li><strong>Compliance Monitoring</strong> - Ensure regulatory adherence</li>
-            <li><strong>Analytics & Reporting</strong> - Comprehensive insights</li>
-        </ul>
-        
-        <h3>Government Benefits</h3>
-        <ul>
-            <li>Improve emergency response times</li>
-            <li>Enhance training programs</li>
-            <li>Ensure quality standards</li>
-            <li>Reduce manual review time by 80%</li>
-        </ul>
-        
-        <h3>Security & Compliance</h3>
-        <p>✅ On-premises deployment<br>
-        ✅ Behind firewall security<br>
-        ✅ No external data transmission<br>
-        ✅ Government-grade encryption</p>
-        
-        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin-top: 30px;">
-            <h3>Ready to Transform Your Audio Operations?</h3>
-            <p>Contact us for a personalized demo and see how A3 can revolutionize your agency's communication analysis.</p>
-            <p><strong>Email:</strong> contact@goviq.us</p>
+
+        <div class="cta-section">
+            <h3>Ready to Transform Your Compliance Operations?</h3>
+            <p>
+                Join forward-thinking Public Safety agencies who are already saving thousands of hours annually while improving compliance accuracy and operational efficiency.
+            </p>
+
+            <div class="contact-info">
+                <div>
+                    <strong>📧 Contact Us</strong><br>
+                    info@goviqs.com<br>
+                    Schedule a personalized demo
+                </div>
+                <div>
+                    <strong>🌐 Learn More</strong><br>
+                    www.goviqs.com<br>
+                    View case studies & ROI calculator
+                </div>
+            </div>
+
+            <p style="margin-top: 10px; font-size: 12px; opacity: 0.9">
+                <em>Ask us about pilot programs and implementation timelines tailored to your organization's needs.</em>
+            </p>
         </div>
     </div>
 </body>

@@ -1,95 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDP1 - Intelligent Document Processing | GovIQ Solutions</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Intelligent Document Processing Platform - Transform Your Real Estate
+      Operations
+    </title>
     <style>
+      @page {
+        margin: 0.5in;
+        size: letter;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.2;
+        color: #333;
+        margin: 0;
+        padding: 10px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+
+      .avoid-break {
+        page-break-inside: avoid;
+      }
+
+      .container {
+        max-width: 8.5in;
+        margin: 0 auto;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #003366 0%, #004080 100%);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      .logo-placeholder {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        width: 80px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px dashed rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .header h1 {
+        margin: 0 0 8px 0;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .header .subtitle {
+        font-size: 14px;
+        opacity: 0.9;
+        margin: 0;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .executive-summary {
+        background: #f8f9ff;
+        border-left: 4px solid #003366;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .section {
+        margin-bottom: 15px;
+      }
+
+      .section h2 {
+        color: #003366;
+        font-size: 18px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #e1e5f2;
+        padding-bottom: 6px;
+      }
+
+      .problem-solution {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+
+      .problem {
+        background: #fff5f5;
+        border-left: 4px solid #e53e3e;
+        padding: 12px;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .solution {
+        background: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 12px;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .roi-box {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        padding: 25px;
+        border-radius: 8px;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .roi-number {
+        font-size: 48px;
+        font-weight: 700;
+        color: #d69e2e;
+        margin: 0;
+      }
+
+      .roi-text {
+        font-size: 16px;
+        color: #744210;
+        margin: 5px 0 0 0;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 10px 0;
+      }
+
+      .benefit-item {
+        background: #f7fafc;
+        padding: 10px;
+        border-radius: 8px;
+        border-left: 3px solid #003366;
+      }
+
+      .benefit-item h4 {
+        margin: 0 0 6px 0;
+        color: #2d3748;
+        font-size: 13px;
+      }
+
+      .benefit-item p {
+        margin: 0;
+        font-size: 12px;
+        color: #4a5568;
+      }
+
+      .cta-section {
+        background: linear-gradient(135deg, #003366 0%, #004080 100%);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 15px;
+        border-radius: 8px;
+      }
+
+      .cta-section h3 {
+        margin: 0 0 12px 0;
+        font-size: 18px;
+      }
+
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 15px;
+      }
+
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 10px 0;
+      }
+
+      .stat-box {
+        text-align: center;
+        padding: 12px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .stat-number {
+        font-size: 20px;
+        font-weight: 700;
+        color: #003366;
+        margin: 0;
+      }
+
+      .stat-label {
+        font-size: 12px;
+        color: #666;
+        margin: 5px 0 0 0;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .highlight {
+        background: #fff3cd;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-weight: 600;
+      }
+
+      @media print {
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f8fafc;
+          background: white;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: none;
         }
-        h1 {
-            color: #1e3a8a;
-            border-bottom: 3px solid #10b981;
-            padding-bottom: 10px;
-        }
-        .close-btn {
-            float: right;
-            background: #ef4444;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-        .close-btn:hover {
-            background: #dc2626;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <button class="close-btn" onclick="window.close()">Close</button>
-        
-        <div style="display: flex; align-items: center; margin-bottom: 30px;">
-            <img src="/logo-white.PNG" alt="GovIQ Solutions" style="height: 60px; margin-right: 15px; background: #1e3a8a; padding: 10px; border-radius: 8px;">
-            <div>
-                <h1 style="margin: 0; border: none; padding: 0;">IDP1 - Intelligent Document Processing</h1>
-                <p style="margin: 5px 0 0 0; color: #6b7280; font-size: 14px;">GovIQ Solutions</p>
+      <div class="header">
+        <img
+          src="./logo-white.PNG"
+          alt="GovIQs Logo"
+          class="logo"
+          style="
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            width: 80px;
+            height: 60px;
+            object-fit: contain;
+          "
+        />
+        <h1>Intelligent Document Processing Platform</h1>
+        <p class="subtitle">
+          Transform Real Estate Operations with Smart Automation
+        </p>
+      </div>
+
+      <div class="content">
+        <div class="executive-summary">
+          <h2 style="margin-top: 0; color: #003366">Executive Summary</h2>
+          <p>
+            <strong>Eliminate 90% of manual document processing time</strong>
+            while improving accuracy and freeing your workforce for high-value
+            tasks. Our AI-powered platform transforms how Real Estate Assessors
+            and Treasurers handle deeds, plats, and mortgage releases—reducing
+            processing from
+            <span class="highlight">15 minutes to 1-2 minutes per document</span
+            >.
+          </p>
+        </div>
+
+        <div class="problem-solution avoid-break">
+          <div class="problem">
+            <h2 style="color: #e53e3e; margin-top: 0">The Problem</h2>
+            <ul>
+              <li>
+                <strong>Time-Intensive Processing:</strong> 15+ minutes per
+                document for trained staff
+              </li>
+              <li>
+                <strong>Format Variability:</strong> Documents arrive in
+                different shapes, layouts, and quality
+              </li>
+              <li>
+                <strong>Manual Entry Errors:</strong> Prone to human error and
+                fatigue
+              </li>
+              <li>
+                <strong>Resource Drain:</strong> Skilled staff tied up in
+                low-value data entry
+              </li>
+              <li>
+                <strong>Compliance Risk:</strong> Inconsistent processing and
+                audit trails
+              </li>
+            </ul>
+          </div>
+
+          <div class="solution">
+            <h2 style="color: #38a169; margin-top: 0">The Solution</h2>
+            <ul>
+              <li>
+                <strong>AI-Powered Extraction:</strong> Automatic field
+                detection and population
+              </li>
+              <li>
+                <strong>Human-in-the-Loop Validation:</strong> Smart
+                verification with pre-populated fields
+              </li>
+              <li>
+                <strong>Multi-Format Support:</strong> Handles any document
+                layout or quality
+              </li>
+              <li>
+                <strong>One-Click Processing:</strong> Direct integration to
+                system of records
+              </li>
+              <li>
+                <strong>Complete Audit Trail:</strong> Full compliance and
+                tracking
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section avoid-break">
+          <h2>Key Impact & ROI</h2>
+
+          <div class="stats-row">
+            <div class="stat-box">
+              <p class="stat-number">15 min</p>
+              <p class="stat-label">Current Manual Process</p>
             </div>
+            <div class="stat-box">
+              <p class="stat-number">1-2 min</p>
+              <p class="stat-label">With IDP Platform</p>
+            </div>
+            <div class="stat-box">
+              <p class="stat-number">90%+</p>
+              <p class="stat-label">Time Reduction</p>
+            </div>
+          </div>
+
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <h4>🚀 Workforce Optimization</h4>
+              <p>
+                Redeploy skilled staff to revenue-generating activities and
+                citizen services
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h4>💰 Cost Reduction</h4>
+              <p>Eliminate overtime costs and reduce processing backlogs</p>
+            </div>
+            <div class="benefit-item">
+              <h4>📊 Improved Accuracy</h4>
+              <p>
+                AI validation reduces errors and ensures consistent data quality
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h4>⚡ Faster Turnaround</h4>
+              <p>
+                Process documents in real-time, improving citizen satisfaction
+              </p>
+            </div>
+          </div>
         </div>
-        
-        <h2>Automated Government Document Intelligence</h2>
-        <p>Revolutionize your document workflows with our AI-powered processing platform designed for government forms, applications, and official documents.</p>
-        
-        <h3>Core Capabilities</h3>
-        <ul>
-            <li><strong>Advanced OCR</strong> - Extract text from any document format</li>
-            <li><strong>Form Processing</strong> - Automated data capture from structured forms</li>
-            <li><strong>Data Extraction</strong> - Intelligent field identification and extraction</li>
-            <li><strong>Compliance Checking</strong> - Automated validation against regulations</li>
-            <li><strong>Workflow Integration</strong> - Seamless integration with existing systems</li>
-        </ul>
-        
-        <h3>Government Applications</h3>
-        <ul>
-            <li>Permit and license applications</li>
-            <li>Tax forms and financial documents</li>
-            <li>Legal and court documents</li>
-            <li>Citizen service requests</li>
-            <li>Regulatory compliance forms</li>
-        </ul>
-        
-        <h3>Efficiency Gains</h3>
-        <p>📈 Reduce processing time by 90%<br>
-        📊 Improve accuracy to 99.5%<br>
-        💰 Cut operational costs by 60%<br>
-        ⚡ Enable 24/7 document processing</p>
-        
-        <h3>Security & Deployment</h3>
-        <p>🔒 On-premises deployment only<br>
-        🛡️ Government-grade security<br>
-        🏢 Private network isolation<br>
-        ✅ Full compliance with regulations</p>
-        
-        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin-top: 30px;">
-            <h3>Transform Your Document Processing Today</h3>
-            <p>Schedule a demonstration to see how IDP1 can streamline your agency's document workflows and improve citizen services.</p>
-            <p><strong>Email:</strong> contact@goviq.us</p>
+
+        <!-- Page Break Here -->
+        <div class="page-break"></div>
+
+        <div class="section avoid-break">
+          <h2>Key Takeaways for Localities</h2>
+          <ul>
+            <li>
+              <strong>Revenue Protection:</strong> Faster, more accurate
+              processing protects tax revenue streams
+            </li>
+            <li>
+              <strong>Staff Satisfaction:</strong> Eliminate repetitive tasks,
+              focus on meaningful work
+            </li>
+            <li>
+              <strong>Scalability:</strong> Handle volume spikes without
+              additional staffing
+            </li>
+            <li>
+              <strong>Compliance Ready:</strong> Built-in audit trails and
+              validation workflows
+            </li>
+            <li>
+              <strong>Future-Proof:</strong> AI models continuously improve with
+              usage
+            </li>
+            <li>
+              <strong>Quick ROI:</strong> Typical payback period of 6-12 months
+            </li>
+          </ul>
         </div>
+
+        <div class="section avoid-break">
+          <h2>Smart Automation Features</h2>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <h4>🤖 Intelligent Classification</h4>
+              <p>
+                Automatically identifies document types (Deeds, Plats, Mortgage
+                Releases)
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h4>🎯 Confidence-Based Processing</h4>
+              <p>
+                High-confidence fields can be fully automated, others flagged
+                for review
+              </p>
+            </div>
+            <div class="benefit-item">
+              <h4>🔄 Continuous Learning</h4>
+              <p>AI models improve accuracy over time with user corrections</p>
+            </div>
+            <div class="benefit-item">
+              <h4>🔗 Seamless Integration</h4>
+              <p>Direct connection to your existing system of records</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <h3>Ready to Transform Your Document Processing?</h3>
+        <p>
+          Join forward-thinking Real Estate Assessors and Treasurers who are
+          already saving thousands of hours annually while improving accuracy
+          and citizen service.
+        </p>
+
+        <div class="contact-info">
+          <div>
+            <strong>📧 Contact Us</strong><br />
+            info@goviqs.com<br />
+            Schedule a personalized demo
+          </div>
+          <div>
+            <strong>🌐 Learn More</strong><br />
+            www.goviqs.com<br />
+            View case studies & ROI calculator
+          </div>
+        </div>
+
+        <p style="margin-top: 20px; font-size: 14px; opacity: 0.9">
+          <em
+            >Ask us about pilot programs and implementation timelines tailored
+            to your organization's needs.</em
+          >
+        </p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
