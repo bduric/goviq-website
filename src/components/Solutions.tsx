@@ -3,22 +3,26 @@ export default function Solutions() {
     {
       title: "A3 - AI Audio Analysis",
       description: "Enterprise-grade platform for analyzing audio calls (911, 311, Radio) with AI-powered transcription and quality assurance.",
-      features: ["Call Transcription", "Quality Scoring", "Modern Web Interface"]
+      features: ["Call Transcription", "Quality Scoring", "Modern Web Interface"],
+      link: "/products/a3-audio-analysis.html"
     },
     {
       title: "IDP1 - Intelligent Document Processing",
       description: "Automated processing and analysis of government documents with advanced OCR and NLP capabilities.",
-      features: ["Form Processing", "Data Extraction", "Compliance Checking"]
+      features: ["Form Processing", "Data Extraction", "Compliance Checking"],
+      link: "/products/idp1-document-processing.html"
     },
     {
       title: "Predictive Analytics",
       description: "Data-driven insights for better decision making and resource allocation across government operations.",
-      features: ["Budget Forecasting", "Risk Assessment", "Performance Metrics"]
+      features: ["Budget Forecasting", "Risk Assessment", "Performance Metrics"],
+      link: null
     },
     {
       title: "On-Premises Deployment",
       description: "Secure deployment behind your firewall with private endpoints and managed identity architecture.",
-      features: ["Private Network", "VNet Integration", "Zero External Access"]
+      features: ["Private Network", "VNet Integration", "Zero External Access"],
+      link: null
     }
   ]
 
@@ -37,9 +41,24 @@ export default function Solutions() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {solutions.map((solution, index) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="text-xl font-semibold text-gray-900">{solution.title}</h3>
+                {solution.link && (
+                  <a 
+                    href={solution.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gov-blue hover:text-gov-navy transition-colors"
+                    title="View detailed information"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
+              </div>
               <p className="text-gov-gray mb-4">{solution.description}</p>
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-4">
                 {solution.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-sm text-gov-gray">
                     <svg className="w-4 h-4 text-gov-green mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -49,6 +68,19 @@ export default function Solutions() {
                   </li>
                 ))}
               </ul>
+              {solution.link && (
+                <a 
+                  href={solution.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm text-gov-blue hover:text-gov-navy font-medium transition-colors"
+                >
+                  Learn More
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              )}
             </div>
           ))}
         </div>
