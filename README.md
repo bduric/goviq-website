@@ -61,3 +61,10 @@ The site is configured for static export and can be deployed to:
 ## Support
 
 For questions about customization or deployment, contact your development team.
+
+## AWS Deployment Status
+
+✅ Migrated to AWS infrastructure:
+- S3 bucket: `goviqs-com-website`
+- CloudFront distribution: `E1BPK8JJ36727M`
+- Domain: `diw7jl9nbbknq.cloudfront.net`
