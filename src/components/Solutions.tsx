@@ -4,13 +4,15 @@ export default function Solutions() {
       title: "A3 - AI Audio Analysis",
       description: "Enterprise-grade platform for analyzing audio calls (911, 311, Radio) with AI-powered transcription and quality assurance.",
       features: ["Call Transcription", "Quality Scoring", "Modern Web Interface"],
-      link: "/products/a3-audio-analysis.html"
+      link: "/products/a3-audio-analysis.html",
+      demoLink: "https://a3-demo.goviq.us"
     },
     {
       title: "IDP1 - Intelligent Document Processing",
       description: "Automated processing and analysis of government documents with advanced OCR and NLP capabilities.",
       features: ["Form Processing", "Data Extraction", "Compliance Checking"],
-      link: "/products/idp1-document-processing.html"
+      link: "/products/idp1-document-processing.html",
+      demoLink: "https://idp1-demo.goviq.us"
     },
     {
       title: "Predictive Analytics",
@@ -68,14 +70,14 @@ export default function Solutions() {
                   </li>
                 ))}
               </ul>
-              {solution.link && (
+              {solution.demoLink && (
                 <a 
-                  href={solution.link} 
+                  href={solution.demoLink} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-sm text-gov-blue hover:text-gov-navy font-medium transition-colors"
                 >
-                  Learn More
+                  See Demo
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
