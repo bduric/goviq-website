@@ -131,7 +131,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Awards Section */}
+        {/* Awards Section 
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
             Nationwide Recognition & Awards
@@ -147,7 +147,7 @@ export default function About() {
             ))}
           </div>
         </div>
-
+         */}
         {/* Mission Section */}
         <div className="bg-gradient-to-r from-gov-blue to-gov-navy rounded-2xl p-8 lg:p-12 text-white">
           <div className="max-w-4xl mx-auto text-center">
