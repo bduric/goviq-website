@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private AI Intelligence Workspace - Secure Government Contracting AI</title>
+    <style>
+        @page {
+            margin: 0.5in;
+            size: letter;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.2;
+            color: #333;
+            margin: 0;
+            padding: 10px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .avoid-break {
+            page-break-inside: avoid;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #003366 0%, #004080 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0 0 8px 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section h2 {
+            color: #003366;
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e1e5f2;
+            padding-bottom: 6px;
+        }
+
+        .section h3 {
+            color: #003366;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .primary-color { color: #003366; }
+        .bg-primary { background-color: #003366; }
+        .accent-color { color: #FFA500; }
+        .bg-accent { background-color: #FFA500; }
+        
+        .stat-box { 
+            border-left: 6px solid #FFA500;
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .executive-summary {
+            background: #f8f9ff;
+            border-left: 4px solid #003366;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .workflow-card {
+            background: white;
+            padding: 14px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #003366;
+            min-height: 130px;
+        }
+
+        .workflow-card.accent {
+            border-top-color: #FFA500;
+        }
+
+        .workflow-card h4 {
+            color: #003366;
+            font-size: 15px;
+            margin: 0 0 8px 0;
+            font-weight: 600;
+        }
+
+        .workflow-card p {
+            font-size: 13px;
+            color: #4a5568;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: "►";
+            color: #003366;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #003366 0%, #004080 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        .cta-section h3 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+        }
+
+        .cta-section p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            background: #003366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .security-badge {
+            background: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
+            margin: 10px 0;
+        }
+
+        .close-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #e53e3e;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: #c53030;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(229, 62, 62, 0.4);
+        }
+
+        .close-btn:active {
+            transform: translateY(0);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .close-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="close-btn" onclick="window.close()" title="Close Window">✕ Close</button>
+    <div class="container">
+        <div class="header">
+            <img src="../logo-white.PNG" alt="GovIQs Logo" style="position: absolute; top: 20px; right: 30px; width: 80px; height: 60px; object-fit: contain;">
+            <div class="logo-section" style="justify-content: center; color: white;">
+                <div class="logo-circle">AI</div>
+                <h1>Private AI Intelligence Workspace</h1>
+            </div>
+            <p class="subtitle">Sovereign, Enterprise-Grade AI for Secure Government Contracting</p>
+        </div>
+
+        <div class="content">
+            <!-- Executive Summary -->
+            <div class="executive-summary avoid-break">
+                <h2 style="margin-top: 0; color: #003366">Executive Summary</h2>
+                <p>In the complex landscape of government contracting, <strong>speed and data security are paramount</strong>. Our Private AI Workspace provides a unified, secure, and brand-agnostic interface that empowers your team to leverage large language models (LLMs) without compromising proprietary data.</p>
+                
+                <p style="margin-top: 10px;"><span class="highlight">Deploy a sovereign AI environment</span> built for secure government contracting, data analysis, and proposal development—where sensitive information never leaves your control.</p>
+            </div>
+
+            <!-- The Challenge -->
+            <div class="section avoid-break">
+                <h2>The Government Contracting Challenge</h2>
+                <div class="two-column">
+                    <div>
+                        <h3 style="color: #e53e3e;">Current Risks with Public AI Tools</h3>
+                        <ul>
+                            <li><strong>Data Exposure:</strong> Proprietary strategies and agency communications sent to third-party servers</li>
+                            <li><strong>Vendor Lock-in:</strong> Dependence on single AI providers with changing terms and pricing</li>
+                            <li><strong>Compliance Gaps:</strong> Difficulty maintaining audit trails and access controls</li>
+                            <li><strong>Limited Context:</strong> Cannot securely upload sensitive RFPs, past performances, or forecasts</li>
+                            <li><strong>Team Silos:</strong> Inconsistent AI usage across capture and proposal teams</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <div class="security-badge">
+                            <h3 style="color: #38a169; margin-top: 0;">Our Secure Solution</h3>
+                            <p><strong>Full Data Sovereignty:</strong> Self-hosted within your secure infrastructure</p>
+                            <p><strong>Multi-Model Flexibility:</strong> Toggle between local and private enterprise APIs</p>
+                            <p><strong>Knowledge Integration:</strong> Securely query your document library</p>
+                            <p><strong>Team Collaboration:</strong> Shared workspaces with role-based access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Capabilities -->
+            <div class="section avoid-break">
+                <h2>Key Capabilities</h2>
+                
+                <div class="workflow-grid">
+                    <div class="workflow-card">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🔒</div>
+                        <h4>Full Data Sovereignty</h4>
+                        <p>Unlike public AI tools, our solution is <strong>entirely self-hosted</strong> within your secure infrastructure. Sensitive project data, agency communications, and proprietary strategies remain under your exclusive control.</p>
+                    </div>
+                    
+                    <div class="workflow-card accent">
+                        <div style="font-size: 24px; margin-bottom: 8px;">📚</div>
+                        <h4>Advanced RAG (Retrieval-Augmented Generation)</h4>
+                        <p>Turn your document library into a <strong>searchable intelligence asset</strong>. Securely upload FAR, historical solicitations, and market intelligence to receive instant, cited answers from your knowledge base.</p>
+                    </div>
+
+                    <div class="workflow-card accent">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🔄</div>
+                        <h4>Flexible Model Orchestration</h4>
+                        <p>Future-proof your AI strategy. Support multiple backends simultaneously—use <strong>high-performance local models</strong> (Ollama) for maximum security or private enterprise APIs for complex reasoning tasks.</p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div style="font-size: 24px; margin-bottom: 8px;">👥</div>
+                        <h4>Collaborative Capture & Proposal Support</h4>
+                        <p>Enable team-wide collaboration with <strong>shared workspaces, shared prompts, and role-based access control (RBAC)</strong>. Standardize proposal drafting with human-in-the-loop workflows.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Break Here -->
+            <div class="page-break"></div>
+
+            <!-- Why Choose This Capability -->
+            <div class="section avoid-break" style="margin-top: 20px;">
+                <h2>Why Choose This Capability?</h2>
+                
+                <div class="workflow-grid">
+                    <div class="workflow-card">
+                        <h4>🚫 No Vendor Lock-in</h4>
+                        <p>Move between LLM providers (Anthropic, Groq, Mistral, OpenAI) without changing your team's workflow or retraining staff</p>
+                    </div>
+                    <div class="workflow-card accent">
+                        <h4>📋 Audit-Ready Security</h4>
+                        <p>Maintain comprehensive logs and administrative oversight for all AI interactions—essential for compliance and security reviews</p>
+                    </div>
+                    <div class="workflow-card accent">
+                        <h4>✈️ Offline-Capable</h4>
+                        <p>Designed to operate entirely offline if required—ideal for SCIF-like environments or high-security projects</p>
+                    </div>
+                    <div class="workflow-card">
+                        <h4>⚡ Rapid Deployment</h4>
+                        <p>Quick setup on your infrastructure with ongoing configuration and integration support from our team</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Use Cases -->
+            <div class="section avoid-break">
+                <h2>Government Contracting Use Cases</h2>
+                
+                <ul class="benefits-list">
+                    <li><strong>RFP Analysis & Response:</strong> Upload solicitations and query requirements, evaluation criteria, and compliance checklists instantly</li>
+                    <li><strong>Past Performance Mining:</strong> Search thousands of pages of historical project data to identify relevant experience and lessons learned</li>
+                    <li><strong>5-Year Forecast Intelligence:</strong> Analyze agency spending patterns and upcoming opportunities with AI-powered insights</li>
+                    <li><strong>Proposal Drafting:</strong> Collaborate on technical volumes with AI assistance while maintaining version control and approval workflows</li>
+                    <li><strong>Competitive Intelligence:</strong> Securely analyze competitor capabilities and positioning without exposing your research to third parties</li>
+                    <li><strong>Compliance Checking:</strong> Validate proposal content against FAR/DFARS requirements using your custom knowledge base</li>
+                </ul>
+            </div>
+
+            <!-- Technical Features -->
+            <div class="section avoid-break">
+                <h2>Technical Features & Integration</h2>
+                
+                <div class="two-column">
+                    <div>
+                        <h3>Deployment Options</h3>
+                        <ul>
+                            <li>On-premises server deployment</li>
+                            <li>Private cloud (AWS GovCloud, Azure Government)</li>
+                            <li>Air-gapped environments</li>
+                            <li>Hybrid configurations</li>
+                        </ul>
+                        
+                        <h3 style="margin-top: 15px;">Supported AI Models</h3>
+                        <ul>
+                            <li><strong>Local Models:</strong> Llama, Mistral, Phi via Ollama</li>
+                            <li><strong>Enterprise APIs:</strong> Anthropic Claude, OpenAI, Groq</li>
+                            <li><strong>Custom Models:</strong> Fine-tuned models for your domain</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3>Security & Compliance</h3>
+                        <ul>
+                            <li>Role-based access control (RBAC)</li>
+                            <li>Single Sign-On (SSO) integration</li>
+                            <li>Comprehensive audit logging</li>
+                            <li>Data encryption at rest and in transit</li>
+                            <li>Network isolation options</li>
+                        </ul>
+                        
+                        <h3 style="margin-top: 15px;">Knowledge Management</h3>
+                        <ul>
+                            <li>Document upload and indexing</li>
+                            <li>Vector database for semantic search</li>
+                            <li>Citation tracking and source attribution</li>
+                            <li>Version control for knowledge bases</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Role -->
+            <div class="section avoid-break">
+                <h2>Our Role: Integration & Configuration Experts</h2>
+                <p>We serve as your <strong>trusted integrator and configurator</strong>, bringing together best-in-class open-source and enterprise AI platforms tailored to your specific needs:</p>
+                
+                <ul class="benefits-list">
+                    <li><strong>Platform Selection:</strong> Recommend the right solution (Open WebUI, LibreChat, or custom) based on your requirements</li>
+                    <li><strong>Secure Deployment:</strong> Install and configure within your infrastructure with security best practices</li>
+                    <li><strong>Model Integration:</strong> Connect local models and enterprise APIs to create your optimal AI toolkit</li>
+                    <li><strong>Knowledge Base Setup:</strong> Configure RAG pipelines and upload your document libraries securely</li>
+                    <li><strong>Team Onboarding:</strong> Train your staff on effective AI usage and collaboration workflows</li>
+                    <li><strong>Ongoing Support:</strong> Provide maintenance, updates, and optimization as your needs evolve</li>
+                </ul>
+                
+                <p style="margin-top: 10px;"><em>We remain brand-agnostic, ensuring you get the best solution for your mission—not vendor lock-in.</em></p>
+            </div>
+
+            <!-- Key Takeaways -->
+            <div class="section avoid-break">
+                <h2>Key Takeaways for Government Contractors</h2>
+                <ul>
+                    <li><strong>Protect Your Competitive Edge:</strong> Keep proprietary strategies and agency relationships confidential</li>
+                    <li><strong>Accelerate Capture & Proposal:</strong> Reduce research and drafting time with AI-powered intelligence</li>
+                    <li><strong>Maintain Compliance:</strong> Audit-ready logs and access controls for security reviews</li>
+                    <li><strong>Future-Proof Investment:</strong> Flexibility to adopt new AI models as technology evolves</li>
+                    <li><strong>Team Standardization:</strong> Consistent AI workflows across your organization</li>
+                    <li><strong>Cost Control:</strong> Predictable costs with local models; optional enterprise APIs for complex tasks</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Ready to Deploy Your Private AI Workspace?</h3>
+            <p>
+                Join forward-thinking government contractors who are leveraging secure AI to win more contracts while protecting their competitive intelligence.
+            </p>
+
+            <div class="contact-info">
+                <div>
+                    <strong>📧 Contact Us</strong><br>
+                    info@goviqs.com<br>
+                    Schedule a confidential consultation
+                </div>
+                <div>
+                    <strong>🌐 Learn More</strong><br>
+                    www.goviqs.com<br>
+                    View deployment options & pricing
+                </div>
+            </div>
+
+            <p style="margin-top: 10px; font-size: 12px; opacity: 0.9">
+                <em>Ask us about pilot deployments, security assessments, and custom configurations for your organization.</em>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

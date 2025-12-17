@@ -15,16 +15,17 @@ export default function Solutions() {
       demoLink: "https://idp1-demo.goviq.us"
     },
     {
-      title: "Predictive Analytics",
-      description: "Data-driven insights for better decision making and resource allocation across government operations.",
-      features: ["Budget Forecasting", "Risk Assessment", "Performance Metrics"],
+      title: "AI Agents & Automation",
+      description: "Intelligent AI agents that work 24/7 to streamline citizen services, automate workflows, and accelerate decision-making across departments.",
+      features: ["Planning & Permitting", "Citizen Request Routing", "Workflow Automation"],
       link: null
     },
     {
-      title: "On-Premises Deployment",
-      description: "Secure deployment behind your firewall with private endpoints and managed identity architecture.",
-      features: ["Private Network", "VNet Integration", "Zero External Access"],
-      link: null
+      title: "Private AI Workspace",
+      description: "Deploy a sovereign, enterprise-grade AI environment built for secure government contracting and data analysis. Data sovereignty with local or private cloud hosting.",
+      features: ["Knowledge Integration (RAG)", "Multi-Model Choice", "Team Collaboration"],
+      link: "/products/private-ai-workspace.html",
+      demoLink: null
     }
   ]
 
